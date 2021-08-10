@@ -7,27 +7,50 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: #777;
+  background-color: #666;
 }
-
 
 .ProfilePic {
   height: 250px;
   width: 250px;
   background-color: blue;
-  border-radius: 50%;
   background-image: url("../../assets/images/profile.jpg");
   background-position: center center;
   background-size: cover;
-  z-index: 1;
   margin-bottom: 2rem;
+  animation-name: profilePic;
+  animation-duration: 750ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .ANShowCaseContainer h1 {
-  font-family: "Courgette", Arial, Helvetica, sans-serif;  
-  transform: rotate(-15deg);
+  font-family: "Courgette", Arial, Helvetica, sans-serif;
+  animation-name: name;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.ANShowCaseContainer p{
-    margin-top: 3rem;
+.ANShowCaseContainer p {
+  margin-top: 3rem;
+}
+
+@keyframes name {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-15deg);
+  }
+}
+@keyframes profilePic {
+  from {
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  to {
+    opacity: 1;
+    border-radius: 50%;
+  }
 }
