@@ -1,0 +1,40 @@
+.SocialButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.SocialButtonsContainer > a {
+  font-size: 0;
+  padding: 1rem 1.7rem;
+  color: black;
+  transition: all 300ms ease-in-out;
+  opacity: 0.8;
+}
+.SocialButtonsContainer > a:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.linkedin {
+  animation-name: GeneralAnimation;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 700ms;
+}
+.gitHub {
+  animation-name: GeneralAnimation;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1000ms;
+}
+@keyframes GeneralAnimation {
+  from {
+    font-size: 0;
+  }
+  to {
+    font-size: 3rem;
+  }
+}

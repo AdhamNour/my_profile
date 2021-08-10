@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
 .ANShowCaseContainer {
@@ -8,6 +7,18 @@
   justify-content: center;
   align-items: center;
   background-color: #666;
+}
+.ANShowCaseContainer::before {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1581092162384-8987c1d64718?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=thisisengineering-raeng-Bg0Geue-cY8-unsplash.jpg");
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.15;
 }
 
 .ProfilePic {
@@ -24,7 +35,7 @@
   animation-fill-mode: forwards;
 }
 
-.ANShowCaseContainer h1 {
+.ANShowCaseContainer > h1 {
   font-family: "Courgette", Arial, Helvetica, sans-serif;
   animation-name: name;
   animation-duration: 500ms;
@@ -32,7 +43,7 @@
   animation-fill-mode: forwards;
 }
 
-.ANShowCaseContainer p {
+.ANShowCaseContainer > p {
   margin-top: 3rem;
 }
 
