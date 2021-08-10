@@ -1,0 +1,30 @@
+.headerContainer {
+  background-color: #333;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+}
+
+.mainHeader {
+  color: #fff;
+  max-width: 1100px;
+  display: flex;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerContainer .mainHeader div .btn {
+  color: #fff;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.headerContainer .mainHeader div .btn:hover{
+    background-color: rgba(255, 255, 255, 0.15)
+}

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+.ANShowCaseContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #777;
+}
+
+
+.ProfilePic {
+  height: 250px;
+  width: 250px;
+  background-color: blue;
+  border-radius: 50%;
+  background-image: url("../../assets/images/profile.jpg");
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.ANShowCaseContainer h1 {
+  font-family: "Courgette", Arial, Helvetica, sans-serif;  
+  transform: rotate(-15deg);
+}
+
+.ANShowCaseContainer p{
+    margin-top: 3rem;
+}
