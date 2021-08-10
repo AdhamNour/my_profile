@@ -26,6 +26,23 @@
   padding: 0.5rem 0.5rem;
 }
 
-.headerContainer .mainHeader div .btn:hover{
-    background-color: rgba(255, 255, 255, 0.15)
+.headerContainer .mainHeader div .btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.buttonsContainer {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.headerContainer .mainHeader div .btn.activeBtn {
+  background-color: red;
+}
+.headerContainer .mainHeader div .btn.activeBtn:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+.alertHolder{
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
 }
