@@ -1,0 +1,16 @@
+.PieceOfPersonalInformationContainer {
+  display: flex;
+  min-width: 381px;
+  width: 381px;
+  margin-bottom: 1rem;
+}
+.PieceOfPersonalInformationContainer .title {
+  flex: 4;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.PieceOfPersonalInformationContainer .detail {
+  flex: 6;
+  color: #555;
+}

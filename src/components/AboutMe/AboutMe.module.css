@@ -1,0 +1,28 @@
+.AboutMeContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+  flex-direction: column;
+  padding: 12rem 2rem;
+}
+.Details {
+  flex: 1;
+  display: flex;
+  width: 80%;
+}
+
+.PersonalInformation,
+.BriefIntroduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.BriefIntroduction {
+  flex: 1;
+  padding: 0 2.5rem;
+  line-height: 2rem;
+}

@@ -14,7 +14,7 @@
   background-size: cover;
   height: 100%;
   position: absolute;
-  top: 40px;
+  top: 50px;
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -22,8 +22,8 @@
 }
 
 .ProfilePic {
-  height: 250px;
-  width: 250px;
+  min-height: 250px;
+  min-width: 250px;
   background-color: blue;
   background-image: url("../../assets/images/profile.jpg");
   background-position: center center;

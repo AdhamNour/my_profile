@@ -12,13 +12,13 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
   const [open, setOpen] = useState(false);
 
   const buttons = [
-    "About Me",
-    "Resume",
-    "Skills",
-    "Recent Projects",
-    "Contacts",
+    { title: "About Me", href: "#AboutMe" },
+    { title: "Resume", href: "#Resume" },
+    { title: "Skills", href: "#Skills" },
+    { title: "Recent Projects", href: "#RecentProjects" },
+    { title: "Contacts", href: "#Contacts" },
   ];
-
+  
   let buttonsUI = buttons.map((button, index) => {
     let _className = "";
     if (index === selectedIndex) {
@@ -27,7 +27,6 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
     return (
       <Button
         className={[classes.btn, _className].join(" ")}
-        color="primary"
         onClick={() => {
           setSelectedIndex(index);
           setOpen(true);
@@ -35,8 +34,9 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
             setOpen(false);
           }, 1500);
         }}
+        href={button.href}
       >
-        {button}
+        {button.title}
       </Button>
     );
   });
