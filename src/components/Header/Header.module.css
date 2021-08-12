@@ -4,9 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
-  bottom: 0;
+  left: 0;
+  width: 100%;
   z-index: 1;
 }
 
@@ -26,7 +27,7 @@
   padding: 1rem 0.5rem;
   transition-property: all;
   transition-duration: 500ms;
-  border-radius:0.5rem;
+  border-radius: 0.5rem;
 }
 
 .headerContainer .mainHeader div .btn:hover {
@@ -49,4 +50,8 @@
   position: fixed;
   bottom: 1rem;
   left: 1rem;
+}
+
+.headerContainer > .mainHeader > h3:hover {
+  cursor: pointer;
 }

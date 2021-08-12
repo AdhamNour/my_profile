@@ -51,7 +51,13 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
   return (
     <div className={classes.headerContainer}>
       <header className={classes.mainHeader}>
-        <h3>Adham Nour El-Waffaa</h3>
+        <h3
+          onClick={() => {
+            animateScroll.scrollToTop();
+          }}
+        >
+          Adham Nour El-Waffaa
+        </h3>
         <div className={classes.buttonsContainer}>{buttonsUI}</div>
       </header>
       <div className={classes.alertHolder}>
