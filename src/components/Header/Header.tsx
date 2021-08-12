@@ -1,43 +1,47 @@
 import React, { useState } from "react";
 import classes from "./Header.module.css";
-import Button from "@material-ui/core/Button";
 import Alert from "@material-ui/lab/Alert";
 import CheckIcon from "@material-ui/icons/Check";
 import Collapse from "@material-ui/core/Collapse";
+import { Link, animateScroll } from "react-scroll";
 
 export interface ANHeaderProps {}
 
 const ANHeader: React.FC<ANHeaderProps> = () => {
-  const [selectedIndex, setSelectedIndex] = useState(-1);
   const [open, setOpen] = useState(false);
+  const [msg, setMsg] = useState("");
 
   const buttons = [
-    { title: "About Me", href: "#AboutMe" },
-    { title: "Resume", href: "#Resume" },
-    { title: "Skills", href: "#Skills" },
-    { title: "Recent Projects", href: "#RecentProjects" },
-    { title: "Contacts", href: "#Contacts" },
+    {
+      title: "About Me",
+      href: "AboutMe",
+      msg: "this section contains my personal information and a brief introduction about myself",
+    },
+    { title: "Resume", href: "Resume" },
+    { title: "Skills", href: "Skills" },
+    { title: "Recent Projects", href: "RecentProjects" },
+    { title: "Contacts", href: "Contacts" },
   ];
-  
+
   let buttonsUI = buttons.map((button, index) => {
-    let _className = "";
-    if (index === selectedIndex) {
-      _className = classes.activeBtn;
-    }
     return (
-      <Button
-        className={[classes.btn, _className].join(" ")}
-        onClick={() => {
-          setSelectedIndex(index);
+      <Link
+        className={classes.btn}
+        to={button.href}
+        smooth
+        spy
+        duration={500}
+        activeClass={classes.activeBtn}
+        onSetActive={(to) => {
+          setMsg(`${to} Section: ${button.msg}`);
           setOpen(true);
           setTimeout(() => {
             setOpen(false);
-          }, 1500);
+          }, 2000);
         }}
-        href={button.href}
       >
         {button.title}
-      </Button>
+      </Link>
     );
   });
   return (
@@ -50,11 +54,10 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
         <Collapse in={open}>
           <Alert
             icon={<CheckIcon fontSize="inherit" />}
-            severity="warning"
+            severity="info"
             variant="filled"
           >
-            This Feature is not Implemented yet. The Icon Color would change but
-            nothing would be happen
+            {msg}
           </Alert>
         </Collapse>
       </div>

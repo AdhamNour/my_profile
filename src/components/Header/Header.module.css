@@ -23,25 +23,29 @@
 .headerContainer .mainHeader div .btn {
   color: #fff;
   margin: 0 0.5rem;
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 0.5rem;
+  transition-property: all;
+  transition-duration: 500ms;
+  border-radius:0.5rem;
 }
 
 .headerContainer .mainHeader div .btn:hover {
   background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
 }
 
 .buttonsContainer {
   display: flex;
-  margin: 0.5rem 0;
 }
 
 .headerContainer .mainHeader div .btn.activeBtn {
+  transition-duration: 1000ms;
   background-color: red;
 }
 .headerContainer .mainHeader div .btn.activeBtn:hover {
   background-color: rgba(255, 0, 0, 0.7);
 }
-.alertHolder{
+.alertHolder {
   position: fixed;
   bottom: 1rem;
   left: 1rem;
