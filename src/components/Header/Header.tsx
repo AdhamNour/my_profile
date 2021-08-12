@@ -17,7 +17,11 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
       href: "AboutMe",
       msg: "this section contains my personal information and a brief introduction about myself",
     },
-    { title: "Resume", href: "Resume" },
+    {
+      title: "Education",
+      href: "Education",
+      msg: "this section contains the certificates I have earned",
+    },
     { title: "Skills", href: "Skills" },
     { title: "Recent Projects", href: "RecentProjects" },
     { title: "Contacts", href: "Contacts" },

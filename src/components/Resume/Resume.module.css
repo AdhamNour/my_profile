@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+}
+.ResumeContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:6rem;
+}
+.paper {
+  padding: 6px 16px;
+}
+.MyIcon {
+  font-size: 2rem;
+}
+.specializationCourses {
+  margin-left: 1.75rem;
+  text-align: left;
+}
+.ResumeContainer p > p > span {
+  background-color: steelblue;
+  padding: 0.25rem 0.5rem;
+  color: white;
+  border-radius: 0.5rem;
+}

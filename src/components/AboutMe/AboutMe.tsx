@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import aos from "aos";
 import PieceOfPersonalInformation from "./PieceOfPersonalInformation/PieceOfPersonalInfromation";
 import classes from "./AboutMe.module.css";
+import aos from "aos";
 import "aos/dist/aos.css";
 
 export interface AboutMeProps {}
@@ -23,7 +23,7 @@ const AboutMe: React.SFC<AboutMeProps> = () => {
   );
   return (
     <div className={classes.AboutMeContainer} id="AboutMe">
-      <h2 data-aos="fade-zoom-in">About Me</h2>
+      <h1 data-aos="fade-zoom-in">About Me</h1>
       <div className={classes.Details}>
         <div data-aos="fade-left" className={classes.PersonalInformation}>
           {myPersonalInformationUI}
