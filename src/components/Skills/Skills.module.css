@@ -1,0 +1,25 @@
+.skillsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(0, 209, 228, 0.55);
+  padding-top: 10rem;
+  flex-direction: column;
+}
+.circularProgressSkillsContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.5rem;
+  padding-top: 2rem;
+  width: 100%;
+  padding: 0 1rem ;
+}
+
+@media(max-width: 500px) {
+  .circularProgressSkillsContainer{
+    display: flex;
+    flex-direction: column;
+  }
+}
+

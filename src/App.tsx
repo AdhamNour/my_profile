@@ -2,6 +2,7 @@ import ANHeader from "./components/Header/Header";
 import ANShowCase from "./components/ShowCase/ANShowCase";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Resume from "./components/Resume/Resume";
+import Skills from "./components/Skills/Skills";
 import classes from "./App.module.css";
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <ANShowCase />
       <AboutMe />
       <Resume />
+      <Skills />
     </div>
   );
 }

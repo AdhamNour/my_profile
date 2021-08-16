@@ -22,7 +22,11 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
       href: "Education",
       msg: "this section contains the certificates I have earned",
     },
-    { title: "Skills", href: "Skills" },
+    {
+      title: "Skills",
+      href: "Skills",
+      msg: "this section contains the skills I master recently",
+    },
     { title: "Recent Projects", href: "RecentProjects" },
     { title: "Contacts", href: "Contacts" },
   ];
