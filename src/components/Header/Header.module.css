@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.headerContainer .mainHeader div {
+  max-width: 100vw;
+}
+
 .headerContainer .mainHeader div .btn {
   color: #fff;
   margin: 0 0.5rem;
@@ -28,6 +32,10 @@
   transition-property: all;
   transition-duration: 500ms;
   border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .headerContainer .mainHeader div .btn:hover {
@@ -54,4 +62,16 @@
 
 .headerContainer > .mainHeader > h3:hover {
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .mainHeader {
+    flex-direction: column;
+  }
+  .mainHeader > h3 {
+    padding: 0.5rem 0;
+  }
+  .headerContainer .mainHeader div {
+    overflow-x: scroll;
+  }
 }

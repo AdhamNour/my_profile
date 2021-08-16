@@ -8,7 +8,6 @@
   padding: 12rem 2rem;
 }
 
-
 .Details {
   flex: 1;
   display: flex;
@@ -27,4 +26,18 @@
   flex: 1;
   padding: 0 2.5rem;
   line-height: 2rem;
+}
+
+@media (max-width: 500px) {
+  .Details {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  .PersonalInformation {
+    display: none;
+  }
+  .BriefIntroduction {
+    padding: 0 0.5rem;
+    padding-top: 2rem;
+  }
 }
