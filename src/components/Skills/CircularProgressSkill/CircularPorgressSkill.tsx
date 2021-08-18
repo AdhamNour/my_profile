@@ -21,7 +21,29 @@ const CircularProgressSkill: React.SFC<CircularProgressSkillProps> = ({
   return (
     <Card className={containerClassName.join(" ")} raised>
       <h2>{skillName}</h2>
-      <h4>{percentage}</h4>
+      <div className={classes.singleChart}>
+        <svg
+          viewBox="0 0 36 36"
+          className={[classes.circularChart, classes.orange].join(" ")}
+        >
+          <path
+            className={classes.circleBg}
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <path
+            className={classes.circle}
+            stroke-dasharray={`${percentage},100`}
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <text x="18" y="20.35" className={classes.percentage}>
+            {percentage}
+          </text>
+        </svg>
+      </div>
     </Card>
   );
 };
