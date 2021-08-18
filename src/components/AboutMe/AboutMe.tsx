@@ -12,7 +12,7 @@ const AboutMe: React.SFC<AboutMeProps> = () => {
   });
   const myPersonalInformation = [
     { title: "Full Name", detail: "Adham Nour El-Waffaa" },
-    { title: "Phone Number", detail: "+20 1550 112 423" },
+    { title: "Phone Number", detail: "+20 1100 998 730" },
     { title: "Email", detail: "adhamnourelwaffaa@gmail.com" },
     { title: "Website", detail: "https://anprofile.herokuapp.com/" },
   ];

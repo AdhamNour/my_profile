@@ -11,12 +11,14 @@ const Skills: React.SFC<SkillsProps> = () => {
     { skillName: "Flutter", precentage: 95, imp: "true" },
     { skillName: "React", precentage: 95, imp: "true" },
     { skillName: "React Native", precentage: 95, imp: "true" },
-    { skillName: "SQL", precentage: 95 },
+    { skillName: "MySQL/SQLite", precentage: 95,imp: "true" },
     { skillName: "Python", precentage: 70 },
     { skillName: "C++", precentage: 75 },
     { skillName: "Native Android", precentage: 75 },
     { skillName: "Java", precentage: 80 },
     { skillName: "NodeJS", precentage: 80 },
+    { skillName: "Unity", precentage: 65 },
+
   ];
   const SkillsUI = skills.map((skill, index) => (
     <CircularProgressSkill

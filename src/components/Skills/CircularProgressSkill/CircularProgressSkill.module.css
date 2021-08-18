@@ -12,8 +12,4 @@
   grid-row: span 2;
   height:400px;
 }
-.circularProgressSkillsElementImportant:nth-child(odd) {
-  background-color: #5c1010e1;
-  color: azure;
-}
 

@@ -27,8 +27,8 @@ const ANHeader: React.FC<ANHeaderProps> = () => {
       href: "Skills",
       msg: "this section contains the skills I master recently",
     },
-    { title: "Recent Projects", href: "RecentProjects" },
-    { title: "Contacts", href: "Contacts" },
+    // { title: "Recent Projects", href: "RecentProjects" },
+    // { title: "Contacts", href: "Contacts" },
   ];
 
   let buttonsUI = buttons.map((button, index) => {
