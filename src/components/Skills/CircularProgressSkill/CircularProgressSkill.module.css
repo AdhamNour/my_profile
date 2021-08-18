@@ -4,26 +4,27 @@
   flex-direction: column;
   align-items: center;
   z-index: 1;
-  height:200px;
+  height: 200px;
   padding-top: 50px;
 }
 .circularProgressSkillsElementImportant {
   grid-column: span 2;
   grid-row: span 2;
-  height:400px;
+  height: 400px;
 }
 
-
 .singleChart {
-  width: 33%;
-  justify-content: space-around ;
+  width: 50%;
+  justify-content: center;
+  /* flex: 1; */
+  margin: auto;
 }
 
 .circularChart {
   display: block;
   margin: 10px auto;
   max-width: 80%;
-  max-height: 250px;
+  /* max-height: 250px; */
 }
 
 .circleBg {
@@ -36,6 +37,8 @@
   fill: none;
   stroke-width: 2.8;
   stroke-linecap: round;
+}
+.animateProgress {
   animation: progress 1s ease-out forwards;
 }
 
@@ -50,7 +53,7 @@
 }
 
 .circularChart.green .circle {
-  stroke: #4CC790;
+  stroke: #4cc790;
 }
 
 .circularChart.blue .circle {
@@ -58,8 +61,17 @@
 }
 
 .percentage {
-  fill: #666;
   font-family: sans-serif;
   font-size: 0.5em;
   text-anchor: middle;
+  stroke: none;
+}
+
+@media (max-width: 500px) {
+  .circularProgressSkillsElement {
+    height: 250px;
+  }
+  .circularProgressSkillsElementImportant {
+    height: 450px;
+  }
 }
