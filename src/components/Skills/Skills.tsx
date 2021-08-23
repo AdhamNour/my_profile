@@ -17,6 +17,7 @@ const Skills: React.SFC<SkillsProps> = () => {
     { skillName: "React", precentage: 95, imp: "true" },
     { skillName: "React Native", precentage: 95, imp: "true" },
     { skillName: "MySQL/SQLite", precentage: 95, imp: "true" },
+    { skillName: "SCSS", precentage: 90, imp: "true" },
     { skillName: "Python", precentage: 70 },
     { skillName: "C++", precentage: 75 },
     { skillName: "Native Android", precentage: 75 },
@@ -39,12 +40,7 @@ const Skills: React.SFC<SkillsProps> = () => {
       data-aos="fade-zoom-in"
     >
       <h1>My Skills</h1>
-      <div
-        className={classes.circularProgressSkillsContainer}
-        data-aos="fade-up"
-      >
-        {SkillsUI}
-      </div>
+      <div className={classes.circularProgressSkillsContainer}>{SkillsUI}</div>
     </div>
   );
 };

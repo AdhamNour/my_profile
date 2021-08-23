@@ -3,6 +3,8 @@ import { Card } from "@material-ui/core";
 import sha512 from "crypto-js/sha512";
 import { useInViewport } from "react-in-viewport";
 import classes from "./CircularProgressSkill.module.css";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 export interface CircularProgressSkillProps {
   skillName: string;
@@ -34,7 +36,12 @@ const CircularProgressSkill: React.SFC<CircularProgressSkillProps> = ({
     containerClassName.push(classes.circularProgressSkillsElementImportant);
   }
   return (
-    <Card className={containerClassName.join(" ")} raised ref={ref}>
+    <Card
+      className={containerClassName.join(" ")}
+      raised
+      ref={ref}
+      data-aos="fade-up"
+    >
       <h2>{skillName}</h2>
       <div className={classes.singleChart}>
         <svg

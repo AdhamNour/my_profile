@@ -222,7 +222,7 @@ const Resume: React.FC<ResumeProps> = () => {
       Connector = null;
     }
     const elementUI = (
-      <TimelineItem key={index}>
+      <TimelineItem key={index} data-aos="fade-up">
         <TimelineOppositeContent>{element.date}</TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot>{element.icon}</TimelineDot>
@@ -248,7 +248,7 @@ const Resume: React.FC<ResumeProps> = () => {
   return (
     <div id="Education" className={classes.ResumeContainer}>
       <h1 data-aos="fade-zoom-in">My Education</h1>
-      <Timeline data-aos="fade-up" align="alternate">
+      <Timeline align={window.screen.width > 450 ? "alternate" : "left"}>
         {myEducationUI}
       </Timeline>
     </div>

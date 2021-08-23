@@ -12,19 +12,20 @@
   content: "";
   background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=altumcode-dMUt0X3f59Q-unsplash.jpg");
   background-size: cover;
+  background-position: center center; 
+  background-repeat: no-repeat;
   height: 100%;
-  position: fixed;
-  top: 50px;
+  position: absolute;
+  top: 0;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.25;
+  opacity: 0.15;
 }
 
 .ProfilePic {
   min-height: 250px;
   min-width: 250px;
-  background-color: blue;
   background-image: url("../../assets/images/profile.jpg");
   background-position: center center;
   background-size: cover;
@@ -37,6 +38,7 @@
 
 .ANShowCaseContainer > h1 {
   font-family: "Courgette", Arial, Helvetica, sans-serif;
+  z-index: 1;
   animation-name: name;
   animation-duration: 500ms;
   animation-iteration-count: 1;
@@ -64,4 +66,30 @@
     opacity: 1;
     border-radius: 50%;
   }
+}
+
+@media screen and (max-width: 450px) {
+  .ProfilePic {
+    min-height: 200px;
+    min-width: 200px;
+  }
+  .ANShowCaseContainer > h1{
+    /* animation:none; */
+    font-size: 1.75rem;
+  }
+  .ANShowCaseContainer::before{
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .ProfilePic {
+    min-height: 200px;
+    min-width: 200px;
+  }
+  .ANShowCaseContainer > h1{
+    /* animation:none; */
+    font-size: 1.5rem;
+  }
+
 }
