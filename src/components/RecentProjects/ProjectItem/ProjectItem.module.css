@@ -1,0 +1,59 @@
+.ProjectItemContainer {
+  height: 300px;
+
+  background-color: transparent;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.ProjectItemContainerInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 500ms;
+  transform-style: preserve-3d;
+}
+
+.ProjectItemContainer:hover .ProjectItemContainerInner {
+  transform: rotateY(180deg);
+}
+
+.ProjectItemContainerInnerFront,
+.ProjectItemContainerInnerBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.ProjectItemContainerInnerFront::before {
+  border-radius: 1rem;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../../assets/images/phone.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-clip: border-box;
+  opacity: 0.5;
+  z-index: -1;
+  transition: opacity 500ms;
+}
+
+.ProjectItemContainerInnerBack {
+  background-color: white;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}

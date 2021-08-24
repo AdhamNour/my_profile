@@ -17,7 +17,7 @@ const CircularProgressSkill: React.SFC<CircularProgressSkillProps> = ({
   percentage,
   imp,
 }) => {
-  const ref = useRef();
+  const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
   const { inViewport } = useInViewport(
     ref,
     {},
@@ -25,35 +25,33 @@ const CircularProgressSkill: React.SFC<CircularProgressSkillProps> = ({
     {}
   );
   const hashedItem = sha512(skillName);
-  let avatarColor = "#";
+  let strokeColor = "#";
   for (let index = 0; index < 6; index++) {
     const element = hashedItem.words[index];
     const newIndex = Math.abs(element % 16);
-    avatarColor = avatarColor.concat(newIndex.toString(16));
+    strokeColor = strokeColor.concat(newIndex.toString(16));
   }
   let containerClassName = [classes.circularProgressSkillsElement];
   if (imp) {
     containerClassName.push(classes.circularProgressSkillsElementImportant);
   }
+
+  console.log(skillName, inViewport);
+
   return (
-    <Card
-      className={containerClassName.join(" ")}
-      raised
-      ref={ref}
-      data-aos="fade-up"
-    >
+    <div className={containerClassName.join(" ")} ref={ref} data-aos="fade-up">
       <h2>{skillName}</h2>
       <div className={classes.singleChart}>
         <svg
           viewBox="0 0 36 36"
           className={[classes.circularChart].join(" ")}
-          style={{ stroke: avatarColor }}
+          style={{ stroke: strokeColor }}
         >
           <path
             className={classes.circleBg}
             d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
           />
           <path
             className={[
@@ -62,20 +60,20 @@ const CircularProgressSkill: React.SFC<CircularProgressSkillProps> = ({
             ].join(" ")}
             stroke-dasharray={`${percentage},100`}
             d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
           />
           <text
             x="18"
             y="20.35"
             className={classes.percentage}
-            style={{ fill: avatarColor }}
+            style={{ fill: strokeColor }}
           >
             {percentage}%
           </text>
         </svg>
       </div>
-    </Card>
+    </div>
   );
 };
 
