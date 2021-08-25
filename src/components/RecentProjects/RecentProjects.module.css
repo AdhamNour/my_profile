@@ -11,7 +11,7 @@
 
 .ProjectsContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
   flex: 1;
   align-content: center ;
@@ -21,4 +21,13 @@
   /* grid-auto-rows: 1fr; */
   grid-gap: 1rem;
   padding:0 1rem;
+}
+@media screen and (max-width:450px){
+  .ProjectsContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .ProjectsContainer > * {
+    margin-top: 1rem;
+  }
 }
