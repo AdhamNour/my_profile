@@ -36,7 +36,6 @@ const CircularProgressSkill: React.SFC<CircularProgressSkillProps> = ({
     containerClassName.push(classes.circularProgressSkillsElementImportant);
   }
 
-  console.log(skillName, inViewport);
 
   return (
     <div className={containerClassName.join(" ")} ref={ref} data-aos="fade-up">

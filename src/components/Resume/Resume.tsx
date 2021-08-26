@@ -243,7 +243,7 @@ const Resume: React.FC<ResumeProps> = () => {
 
   useEffect(() => {
     aos.init({ duration: 2000 });
-  });
+  },[]);
 
   return (
     <div id="Education" className={classes.ResumeContainer}>

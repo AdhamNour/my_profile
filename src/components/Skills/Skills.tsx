@@ -3,12 +3,17 @@ import classes from "./Skills.module.css";
 import aos from "aos";
 import "aos/dist/aos.css";
 import CircularProgressSkill from "./CircularProgressSkill/CircularPorgressSkill";
+import axiosInstance from "../../utils/axiosInstance";
 export interface SkillsProps {}
 
 const Skills: React.SFC<SkillsProps> = () => {
   useEffect(() => {
     aos.init({ duration: 500 });
-  });
+  }, []);
+  useEffect(() => {
+    
+    axiosInstance.get("/skills").then((res) => console.log(res.data.skills));
+  }, []);
   const skills = [
     { skillName: "HTML5", precentage: 90, imp: "true" },
     { skillName: "CSS3", precentage: 90, imp: "true" },
