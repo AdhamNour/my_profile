@@ -13,8 +13,9 @@ import pic from "../../../assets/images/phone.jpg";
 export interface ProjectItemProps {
   project: {
     title: string;
-    description: string[];
+    description?: string[];
     type: string;
+    imp?: boolean;
     links?: {
       youtube?: string;
       github?: string;
@@ -31,7 +32,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   const isHovering = useRef<Boolean>(false);
   return (
     <div
-      className={[classes.ProjectItemContainer].join(" ")}
+      className={[
+        classes.ProjectItemContainer,
+        project.imp ? classes.ProjectItemContainerImportant : "",
+      ].join(" ")}
       data-aos="fade-up"
     >
       <div
@@ -64,7 +68,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
             <h2>{project.title}</h2>
             <h5>{project.type}</h5>
             <ul>
-              {project.description.map((d, i) => {
+              {project.description?.map((d, i) => {
                 return <li key={i}>{d}</li>;
               })}
             </ul>

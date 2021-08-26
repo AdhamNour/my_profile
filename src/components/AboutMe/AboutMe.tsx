@@ -12,8 +12,8 @@ const AboutMe: React.SFC<AboutMeProps> = () => {
   });
   const myPersonalInformation = [
     { title: "Full Name", detail: "Adham Nour El-Waffaa" },
-    { title: "Phone Number", detail: "+20 1100 998 730" },
-    { title: "Email", detail: "adhamnourelwaffaa@gmail.com" },
+    // { title: "Phone Number", detail: "+20 1100 998 730" },
+    // { title: "Email", detail: "adhamnourelwaffaa@gmail.com" },
     { title: "Website", detail: "https://anprofile.herokuapp.com/" },
   ];
   const myPersonalInformationUI = myPersonalInformation.map(
@@ -33,7 +33,7 @@ const AboutMe: React.SFC<AboutMeProps> = () => {
           <p>
             My Name is Adham Nour El-Waffaa,Graduated from Faculty of
             Engineering Ain Shams University, Computers and Systems Department,
-            Experienced in Mobile development using both Flutter and Reat Native
+            Experienced in Mobile development using both Flutter and React Native
             Frameworks, and Frontend Development using HTML5, CSS3, JavaScript
             in addition to React as a framework
           </p>

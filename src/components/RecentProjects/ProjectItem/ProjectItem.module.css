@@ -1,8 +1,13 @@
 .ProjectItemContainer {
-  height: 350px;
+  height: 200px;
   background-color: transparent;
   width: 100%;
   perspective: 1000px;
+}
+.ProjectItemContainerImportant {
+  height: 400px;
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 
@@ -17,6 +22,15 @@
 
 .ProjectItemContainer:hover .ProjectItemContainerInner {
   transform: rotateY(180deg);
+}
+
+.ProjectItemContainer:nth-child(odd):hover .ProjectItemContainerInner{
+  transform: rotateX(180deg);
+
+}
+.ProjectItemContainer:nth-child(odd) .ProjectItemContainerInnerBack{
+  transform: rotateX(180deg);
+
 }
 
 .ProjectItemContainerInnerFront,

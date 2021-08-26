@@ -1,0 +1,121 @@
+"use strict";
+exports.__esModule = true;
+var react_1 = require("react");
+var ProjectItem_1 = require("./ProjectItem/ProjectItem");
+var RecentProjects_module_css_1 = require("./RecentProjects.module.css");
+var an_shoop_png_1 = require("../../assets/images/an_shoop.png");
+var CBMR_png_1 = require("../../assets/images/CBMR.png");
+var ToDo_png_1 = require("../../assets/images/ToDo.png");
+var Profile_png_1 = require("../../assets/images/Profile.png");
+var InvertedIndex_png_1 = require("../../assets/images/InvertedIndex.png");
+var OrderSummary_png_1 = require("../../assets/images/OrderSummary.png");
+var RecentProeject = function () {
+    var projects = [
+        {
+            imp: true,
+            title: "My Portfolio",
+            description: [
+                "This project aims to show my skills and my recent projects",
+                "The Project uses ReactJS for the web client ",
+                "responsive on the mobile devices",
+            ],
+            type: "web(React)",
+            links: {
+                github: "https://github.com/AdhamNour/my_profile",
+                visit: "https://anprofile.herokuapp.com/"
+            },
+            pic: Profile_png_1["default"]
+        },
+        {
+            imp: true,
+            title: "LMS - Learning Manegment System",
+            description: [
+                "This project aims to create a platform that provides the services required for remote education as part of a graduation project at Ain Shams University.",
+                "The Project uses ReactJS for the web client and React Native for the mobile client",
+                "Implemented the mobile client and participated in the web frontend",
+            ],
+            type: "web(React)/mobile(React Native)",
+            links: {
+                github: "https://github.com/Graduation-Team-2021/LMS-Graduation-Project"
+            },
+            pic: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"
+        },
+        {
+            imp: true,
+            title: "AN Shop Application",
+            description: [
+                "The Application is an e-commerce application with cart and provide the user with the ability to sell their own products",
+                "The application use flutter to implement the mobile application and Firebase as backend (backend as a service – the free tier)",
+            ],
+            type: "mobile(Flutter)",
+            links: {
+                github: "https://github.com/AdhamNour/AN_shop_application",
+                download: "https://cdn.fbsbx.com/v/t59.2708-21/213070577_647240746676148_3608937782739121501_n.docx/mm-project-1.docx?_nc_cat=100&ccb=1-5&_nc_sid=0cab14&_nc_ohc=vqPXp9x4Z00AX9KLPz4&_nc_ht=cdn.fbsbx.com&oh=96954de3bd8f42b3beaff8a9703f0972&oe=61263AE3&dl=1",
+                youtube: "https://youtu.be/-cC8QkxEhX8"
+            },
+            pic: an_shoop_png_1["default"]
+        },
+        {
+            title: "Content Based Multimeadia Retrival System",
+            description: [
+                "The project is implementation of a search engine that search the set of pictures and videos and extract the most similar one to the search target",
+                "The Projects uses Flutter to Implement the mobile client and Flask (Python Microframework for backend development)",
+                "Implemented the frontend part and participated in the backend of this project",
+            ],
+            type: "mobile(Flutter)/web(Flask)",
+            links: {
+                github: "https://github.com/AdhamNour/ContentBasedMultimediaRetrivalSystem"
+            },
+            pic: CBMR_png_1["default"],
+            imp: true
+        },
+        {
+            title: "The Dark Bluetooth",
+            description: [
+                "The application is implemented to send certain character (or stream of character) to TivaC microcontroller using Bluetooth",
+            ],
+            type: "mobile(Native Android)",
+            links: {
+                github: "https://github.com/AdhamNour/The_Dark_Blurtooth"
+            },
+            pic: "https://images.unsplash.com/photo-1603731955926-81917dad5a80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80"
+        },
+        {
+            title: "ToDOFlutter",
+            description: [
+                "The project helps the user to create its own tasks and divide it into subtasks then store them in SQLite database on the users phone storage",
+                "The Projects uses flutter to implement the mobile application",
+            ],
+            type: "mobile(Flutter)",
+            links: {
+                github: "https://github.com/AdhamNour/ToDoFlutter"
+            },
+            pic: ToDo_png_1["default"],
+            imp: true
+        },
+        {
+            title: "The Inverted Index",
+            description: [
+                "Inverted Index Project is searching for a word or a symbol in any set of file using Trie data structure implemented with Qt Creator and C++",
+            ],
+            type: "Desktop(C++)",
+            links: {
+                github: "https://github.com/AdhamNour/The_Dark_Blurtooth",
+                youtube: "https://youtu.be/acHyS83wAaE"
+            },
+            pic: InvertedIndex_png_1["default"]
+        },
+        {
+            title: "Order Summary Page",
+            type: "Web(HTML/CSS)",
+            links: {
+                visit: "https://condescending-murdock-f031a5.netlify.app/"
+            },
+            pic: OrderSummary_png_1["default"]
+        },
+    ];
+    return (react_1["default"].createElement("div", { className: RecentProjects_module_css_1["default"].RecentProjectsContainer, id: "RecentProjects" },
+        react_1["default"].createElement("h1", null, "My Recent Project"),
+        react_1["default"].createElement("div", { className: RecentProjects_module_css_1["default"].ProjectsContainer }, projects.map(function (project) { return (react_1["default"].createElement(ProjectItem_1["default"], { project: project })); }))));
+};
+exports["default"] = RecentProeject;

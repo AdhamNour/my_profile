@@ -6,6 +6,7 @@ import CBMR from "../../assets/images/CBMR.png";
 import ToDo from "../../assets/images/ToDo.png";
 import Profile from "../../assets/images/Profile.png";
 import InvertedIndex from "../../assets/images/InvertedIndex.png";
+import OrderSummary from '../../assets/images/OrderSummary.png';
 export interface RecentProejectProps {}
 
 const RecentProeject: React.SFC<RecentProejectProps> = () => {
@@ -36,7 +37,7 @@ const RecentProeject: React.SFC<RecentProejectProps> = () => {
       type: "web(React)/mobile(React Native)",
       links: {
         github:
-        "https://github.com/Graduation-Team-2021/LMS-Graduation-Project",
+          "https://github.com/Graduation-Team-2021/LMS-Graduation-Project",
       },
       pic: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80",
     },
@@ -69,6 +70,18 @@ const RecentProeject: React.SFC<RecentProejectProps> = () => {
           "https://github.com/AdhamNour/ContentBasedMultimediaRetrivalSystem",
       },
       pic: CBMR,
+      imp: true,
+    },
+    {
+      title: "The Dark Bluetooth",
+      description: [
+        "The application is implemented to send certain character (or stream of character) to TivaC microcontroller using Bluetooth",
+      ],
+      type: "mobile(Native Android)",
+      links: {
+        github: "https://github.com/AdhamNour/The_Dark_Blurtooth",
+      },
+      pic: "https://images.unsplash.com/photo-1603731955926-81917dad5a80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80",
     },
     {
       title: "ToDOFlutter",
@@ -81,18 +94,9 @@ const RecentProeject: React.SFC<RecentProejectProps> = () => {
         github: "https://github.com/AdhamNour/ToDoFlutter",
       },
       pic: ToDo,
+      imp:true,
     },
-    {
-      title: "The Dark Bluetooth",
-      description: [
-        "The application is implemented to send certain character (or stream of character) to TivaC microcontroller (or any other microcontroller that uses the same coding to function) using Bluetooth",
-      ],
-      type: "mobile(Native Android)",
-      links: {
-        github: "https://github.com/AdhamNour/The_Dark_Blurtooth",
-      },
-      pic: "https://images.unsplash.com/photo-1603731955926-81917dad5a80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80",
-    },
+    
     {
       title: "The Inverted Index",
       description: [
@@ -104,6 +108,15 @@ const RecentProeject: React.SFC<RecentProejectProps> = () => {
         youtube: "https://youtu.be/acHyS83wAaE",
       },
       pic: InvertedIndex,
+    },
+    {
+      title: "Order Summary Page",
+      
+      type: "Web(HTML/CSS)",
+      links: {
+        visit: "https://condescending-murdock-f031a5.netlify.app/",
+      },
+      pic: OrderSummary,
     },
   ];
 
